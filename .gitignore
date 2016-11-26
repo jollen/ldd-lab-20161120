@@ -1,0 +1,5 @@
+*.o
+modules.order
+Module.symvers
+*.ko
+tags

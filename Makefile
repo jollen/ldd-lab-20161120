@@ -1,5 +1,10 @@
 obj-m := cdata.o cdata_plat_dev.o
 
+#
+# See: http://stackoverflow.com/questions/24975377/kvm-module-verification-failed-signature-and-or-required-key-missing-taintin
+#
+CONFIG_MODULE_SIG=n
+
 KDIR := /usr/src/linux-headers-3.13.0-74-generic
 PWD := $(shell pwd)
 

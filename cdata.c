@@ -55,9 +55,6 @@ static int cdata_open(struct inode *inode, struct file *filp)
 	cdata->buf = (char *)kmalloc(BUF_SIZE, GFP_KERNEL);
 	cdata->offset = 0;
 	init_waitqueue_head(&cdata->writeable);
-#if 0
-	INIT_WORK(&cdata->work, write_to_hardware);
-#endif
 	init_timer(&cdata->timer);
 
 	filp->private_data = (void *)cdata;
